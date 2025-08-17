@@ -42,8 +42,8 @@ tree2 C:\path\to\dir --threshold 50 --head 3 --tail 2
 python "%~dp0tree2.py" %*
 ```
 
-4. 環境変数 PATH に C:\Users\<username>>\bin を追加します
-（コントロールパネル → システム → 詳細設定 → 環境変数）
+4. 環境変数 PATH に C:\Users\<username>\bin を追加します
+（コントロールパネル → システム → 詳細設定 → 環境変数。pathの項目に追加）
 
 5. 新しい PowerShell を開いて動作確認します:
 ```
@@ -55,15 +55,18 @@ tree2 --help
 ## 表示例
 
 ```
-CellStatsDir/
-└── Morphology2D/
-    ├── 20221008_005902_S2_C902_P99_N99_F001.TIF
-    ├── 20221008_005902_S2_C902_P99_N99_F002.TIF
-    ├── 20221008_005902_S2_C902_P99_N99_F003.TIF
-    ... (304 .tif files total)
-    ├── 20221008_005902_S2_C902_P99_N99_F303.TIF
-    ├── 20221008_005902_S2_C902_P99_N99_F304.TIF
-    └── Thumbs.db
+tree2 Images
+```
+```
+Images/
+├── raw/
+│   ├── F001_ch0_raw.tif
+│   ├── F001_ch1_raw.tif
+│   ├── F001_ch2_raw.tif
+│       ... (1520 .tif files total)
+│   ├── F304_ch3_raw.tif
+│   └── F304_ch4_raw.tif
+├── Thumbs.db
 ```
 
 ## 注意
