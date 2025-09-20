@@ -73,6 +73,18 @@ Images/
 
 罫線（├──, └──, │）が文字化けする場合は PowerShell を使用してください
 
+
+# LINUXへの導入例
+
+```
+mkdir -p ~/.local/bin
+curl -L https://raw.githubusercontent.com/rchiji/tree-command/main/tree2.py -o ~/.local/bin/tree2
+chmod +x ~/.local/bin/tree2
+echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
+```
+shellを再起動して（.bashrcを読み込み直して）、`tree2 --help`が通れば成功。（`~/.local/bin/tree2 --help`と呼んでも良い。）
+
+
 CMD を使う場合は chcp 65001 で UTF-8 に切り替えると改善することがあります
 
 
