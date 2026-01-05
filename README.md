@@ -1,7 +1,7 @@
 # tree-command
 
-拡張子ごとにファイルをグループ化し、**大量のファイルは中略して表示するツリー表示ツール**です。  
-中略部分はプレーンテキストで表示され、例えば以下のようになります:
+拡張子ごとにファイルをグループ化し、**大量のファイルは中略して表示するツリー表示ツール**。  
+中略部分は、例えば以下のようになる:
 
 ... (304 .tif files total)
 
@@ -15,7 +15,7 @@ tree2 C:\path\to\dir --threshold 50 --head 3 --tail 2
 ## オプション
 
  - --threshold / -t  
- 1つの拡張子グループに含まれるファイル数がこの数を超えると中略します（デフォルト: 10）
+ 1つの拡張子グループに含まれるファイル数がこの数を超えると中略（デフォルト: 10）
  - --head  
  中略時に先頭に表示する件数（デフォルト: 3）
  - --tail  
@@ -31,21 +31,21 @@ tree2 C:\path\to\dir --threshold 50 --head 3 --tail 2
 
 ## Windows への簡単インストール方法
 
-1. 任意の場所にフォルダを作成します（例: C:\Users\<username>\bin）
+1. 任意の場所にフォルダを作成（例: C:\Users\\\<username>\bin）
 
-2. このフォルダに tree2.py をコピーします
+2. このフォルダに tree2.py をコピー
 
-3. 同じフォルダに tree2.bat を作成し、内容を以下のようにします:
+3. 同じフォルダに tree2.bat を作成し、内容を以下のようにする:
 
 ```
 @echo off
 python "%~dp0tree2.py" %*
 ```
 
-4. 環境変数 PATH に C:\Users\<username>\bin を追加します
+4. 環境変数 PATH に C:\Users\\\<username>\bin を追加
 （コントロールパネル → システム → 詳細設定 → 環境変数。pathの項目に追加）
 
-5. 新しい PowerShell を開いて動作確認します:
+5. 新しい PowerShell を開いて動作確認:
 ```
 tree2 --help
 ```
@@ -71,7 +71,7 @@ Images/
 
 ## 注意
 
-罫線（├──, └──, │）が文字化けする場合は PowerShell を使用してください
+罫線（├──, └──, │）が文字化けする場合は PowerShell を使用したほうがいいかも
 
 
 # LINUXへの導入例
@@ -85,6 +85,6 @@ echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
 shellを再起動して（.bashrcを読み込み直して）、`tree2 --help`が通れば成功。（`~/.local/bin/tree2 --help`と呼んでも良い。）
 
 
-CMD を使う場合は chcp 65001 で UTF-8 に切り替えると改善することがあります
+CMD を使う場合は chcp 65001 で UTF-8 に切り替えると改善することがある。
 
 
